@@ -8,6 +8,7 @@ import LikedSongs from './pages/LikedSongs';
 import Playlist from './pages/Playlist';
 import Error from "./pages/Error";
 import AudioBar from "./components/AudioBar";
+import CreatePlaylist from "./pages/CreatePlaylist";
 
 const App = () => {
   return (
@@ -16,8 +17,9 @@ const App = () => {
         <SideBarLeft />
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/liked/:trackId" component={<LikedSongs />} />
+          <Route path="/liked" element={<LikedSongs />} />
           <Route path="/playlist" element={<Playlist />} />
+          <Route path="/create-playlist" element={<CreatePlaylist />} />
           <Route path="*" element={<Error />} />
         </Routes>
         <SideBarRight />

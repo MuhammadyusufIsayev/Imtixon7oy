@@ -12,6 +12,15 @@ const Home = () => {
   const [tracks, setTracks] = useState([]);
   const [selectedAlbumId, setSelectedAlbumId] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [playlistData, setPlaylistData] = useState(null);
+
+  useEffect(() => {
+    if (localStorage.getItem("playlistData")) {
+      const playlistData = JSON.parse(localStorage.getItem("playlistData"));
+      setPlaylistData(playlistData);
+      console.log(playlistData);
+    }
+  }, []);
 
   useEffect(() => {
     fetch("https://accounts.spotify.com/api/token", {
@@ -239,14 +248,3 @@ const Home = () => {
 };
 
 export default Home;
-
-{
-  /* <ul>
-        {tracks.map((track) => (
-          <li key={track.id}>
-            <p>{track.name}</p>
-            <audio src={track.preview_url} controls></audio>
-          </li>
-        ))}
-      </ul> */
-}

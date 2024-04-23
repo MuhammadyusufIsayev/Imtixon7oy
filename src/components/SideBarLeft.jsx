@@ -62,11 +62,13 @@ const SideBarLeft = () => {
               <p>Your Library</p>
           </li>
           <li>
-            <MdAddBox color="#B3B3B3" size={25} />
-            <p>Create Playlist</p>
+            <NavLink to="/create-playlist">
+              <MdAddBox size={25} />
+              <p>Create Playlist</p>
+            </NavLink>
           </li>
           <li>
-            <NavLink to="/liked-songs">
+            <NavLink to="/liked">
               <BiSolidHeartSquare size={25} />
               <p>Liked Songs</p>
             </NavLink>

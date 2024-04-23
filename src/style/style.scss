@@ -83,8 +83,7 @@ body {
 
 .home {
   width: 100%;
-  padding: 20px 0 0 40px;
-  height: 3050px;
+  padding: 20px 0 130px 40px;
   background: linear-gradient(180deg, #3333a3 8.09%, #121212 20.4%);
 }
 
@@ -590,4 +589,105 @@ body {
 
 .liked-tracks-page{
   width: 95%;
+}
+
+.liked-tracks-page{
+  padding: 20px 0 100px 40px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #f62828 5.09%, #121212 43.28%);
+}
+
+.create-playlist{
+  padding: 20px 0 100px 40px;
+  width: 95%;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #47f628 5.09%, #121212 43.28%);
+  .good {
+    display: flex;
+    flex-direction: column;
+    .top {
+      display: flex;
+      align-items: center;
+    }
+  }
+  .form-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    h1{
+      color: white;
+      font-family: "Roboto", sans-serif;
+      font-size: 40px;
+      font-weight: 700;
+      line-height: 52.23px;
+      letter-spacing: 0.03em;
+      text-align: left; 
+    }
+    form{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 25px;
+      border: 1px solid white;
+      padding: 100px;
+      border-radius: 10px;
+      input{
+        width: 500px;
+        height: 50px;
+        background: transparent;
+        border-radius: 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28.13px;
+        letter-spacing: 0.03em;
+        text-align: left;
+        padding-left: 20px;
+        outline: none;
+        border: 2px solid white;
+        color: white;
+        transition: 0.2s;
+        &:focus{
+          border: 2px solid #1ed760;
+          transition: 0.2s;
+        }
+        &:hover{
+          border: 2px solid #1ed760;
+          transition: 0.2s;
+        }
+        &::placeholder{
+          color: white;
+          font-family: "Roboto", sans-serif;
+          font-size: 20px;
+          font-weight: 400;
+          line-height: 28.13px;
+          letter-spacing: 0.03em;
+          text-align: left;
+        }
+      }
+      button{
+        width: 400px;
+        height: 50px;
+        background: #FFFFFF;
+        border: none;
+        border-radius: 10px;
+        font-family: "Roboto", sans-serif;
+        font-size: 20px;
+        font-weight: 400;
+        line-height: 28.13px;
+        letter-spacing: 0.03em;
+        transition: 0.2s;
+        cursor: pointer;
+        &:hover{
+          background: #1ed760;
+          color: white;
+          transition: 0.2s;
+        }
+      }
+    }
+  }
 }
